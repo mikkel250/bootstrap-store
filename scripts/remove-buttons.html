@@ -1,0 +1,20 @@
+<HTML>
+  <HEAD>
+    <TITLE> Add/Remove dynamic rows in HTML table </TITLE>
+
+    <table></table>
+    <SCRIPT language="javascript">
+      window.onload = function(){ var table =
+      document.getElementsByTagName('table')[0]; for(var j=0; j<5; j++){ var row
+      = table.insertRow(table.rows.length); var cell1 = row.insertCell(0);
+      cell1.innerHTML = 'getIndex'; var cell2 = row.insertCell(1);
+      cell2.innerHTML = 'remove'; } var rows =
+      document.getElementsByTagName('tr'); for(var i=0; i<rows.length; i++){
+      rows[i].cells[0].onclick = function(){ alert(this.parentElement.rowIndex);
+      }; rows[i].cells[1].onclick = function(){
+      this.parentElement.parentElement.deleteRow(this.parentElement.rowIndex); }
+      } }
+    </SCRIPT>
+  </HEAD>
+  <BODY> <table></table> </BODY>
+</HTML>

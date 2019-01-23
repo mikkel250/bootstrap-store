@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Demo Store - Bootstrap 4">
+  <meta name="author" content="Mikkel Ridley">
+  
+  <link rel="icon" href="https://v4-alpha.getbootstrap.com/favicon.ico">
+  
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+ 
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Customized JS -->
+<script type="text/javascript" src="scripts/script.js"></script>
+
+ <title>Demo Store - Bootstrap</title>
+ <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/offcanvas/">
+
+  <!-- Bootstrap core CSS -->
+  <link href="./Off Canvas Template for Bootstrap_files/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./styles/style.css">
+<!-- Custom styles for this template -->
+    <link href="./Off Canvas Template for Bootstrap_files/offcanvas.css" rel="stylesheet">
+  
+</head>
+
+
+
+<body>
+
+  <nav class="navbar navbar-toggleable-md fixed-top navbar-inverse bg-inverse" id="toggle">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <a class="navbar-brand" href="https://v4-alpha.getbootstrap.com/examples/offcanvas/#"></a>
+
+   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+     <ul class="navbar-nav mr-auto">
+       <li class="nav-item">
+         <a class="nav-link" href="index.html">Home </a>
+       </li>
+       <li class="nav-item">
+         <a href="finished.html" class="nav-link">Finished</a>
+       </li>
+       <li class="nav-item">
+         <a href="guestural.html" class="nav-link">Guestural</a>
+       </li>
+       <li class="nav-item active">
+         <a href="about.html" class="nav-link">About<span class="sr-only">(current)</span></a>
+       </li>
+       <li class="nav-item">
+         <a href="shipping-rates.html" class="nav-link">Shipping Rates</a>
+       </li>
+       <li class="nav-item">
+         <a href="https://amazecode.com" target="_blank" class="nav-link">Contact</a>
+       </li>        
+     </ul>
+
+     <!-- note: the "ml-auto" will pull the items to the right. "mr-auto" will pull items to the left -->
+     <ul class="navbar-nav ml-auto">
+      <li class="nav-item my-2"><a href="#" title="facebook" rel="external nofollow"><img alt="" src="images/facebook.png"></a></li>
+       <li class="nav-item my-2"><a href="#" title="twitter" rel="external nofollow"><img alt="" src="images/twitter.png"></a></li>
+       <li class="nav-item my-2"><a href="#" title="linkedin" rel="external nofollow"><img alt="" src="images/linkedin.png"></a></li>
+       <li class="nav-item my-2"><a href="#" title="rss" rel="external nofollow"><img alt="" src="images/rss.png"></a></li>
+       <li class="nav-item my-2"><i class="fas fa-shopping-cart"></i></li>
+    </ul>
+
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Enter Search Text Here">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <button style="font-size:24px" onclick="window.location.href ='./cart.html'; return false">Cart <i class="fa fa-shopping-cart"></i></button> <!-- to get this working, had to add "return false", otherwise was just refreshing -->
+
+    </form>
+    
+   </div>
+  </nav>
+
+
+  <div class="container-fluid">
+
+    <div class="row row-offcanvas row-offcanvas-right">
+
+      <div class="col-12 col-md-9">
+        <p class="float-right hidden-md-up">
+          <button type="button" class="btn btn-primary btn sm" data-toggle=
+          "offcanvas" id=""></button>
+        </p>
+        <div class="jumbotron shadow" id="top-jumbotron">
+          <h1 class="text-white">Demo Store - Bootstrap Version</h1>
+        </div>
+        
+        
+        <h2 class="bg-success text-white p-1"> About</h2>
+        
+  <!-- Featured Items Section -->
+
+        <div class="row h-50">   
+          <div class="col-12">
+           <div class="card">
+          <img class="shadow card-img-top img-thumbnail mx-auto" id="profile" src="../images/my-profile-cropped-400px-height.jpg">
+          <div class="card-body shadow">
+           <h3 class="card-title text-center">Hi there, I'm Mikkel Ridley.</h3>
+            <p class="card-text text-center">I have a degree in ceramics and am using some work here to create a mock online store as a project intended to showcase and increase my skills in Web Development.</p>
+            <p class="card-text text-center">This site uses and is intended to showcase the use of<a href="https://getbootstrap.com/"> Bootstrap 4</a> and its mobile-first, fluid, grid-based layout.</p>
+            <p class="card-text text-center">I am located in San Francisco, CA.</p>
+            <p class="maps-apis"></p>
+            <p class="card-text text-center">If you'd like to know more about me professionally, you can find my entire online portfolio and CV at <a href="https://amazecode.com">My Personal Website!</a></p><br>
+            <p class="card-text text-center">Thanks for Visiting!</p><br>
+            <!--Section: Contact v.1-->
+<section class="section pb-5">
+
+  <!--Section heading-->
+  <h2 class="section-heading h1 pt-4">Contact us</h2>
+  <!--Section description-->
+  <p class="section-description pb-4">Send a message using the form below. </p>
+
+  <div class="row">
+
+    <!--Grid column-->
+    <div class="col-lg-5 mb-4">
+
+      <!--Form with header-->
+      <div class="card">
+
+        <div class="card-body">
+          <!--Header-->
+          <div class="form-header blue accent-1">
+            <h3><i class="fa fa-envelope"></i> Write to us:</h3>
+          </div>
+
+          <p>We'll write rarely, but only the best content.</p>
+          <br>
+
+          <!--Body-->
+          <div class="md-form">
+            <i class="fa fa-user prefix grey-text"></i>
+            <input type="text" id="form-name" class="form-control">
+            <label for="form-name">Your name</label>
+          </div>
+
+          <div class="md-form">
+            <i class="fa fa-envelope prefix grey-text"></i>
+            <input type="text" id="form-email" class="form-control">
+            <label for="form-email">Your email</label>
+          </div>
+
+          <div class="md-form">
+            <i class="fa fa-tag prefix grey-text"></i>
+            <input type="text" id="form-Subject" class="form-control">
+            <label for="form-Subject">Subject</label>
+          </div>
+
+          <div class="md-form">
+            <i class="fa fa-pencil prefix grey-text"></i>
+            <textarea type="text" id="form-text" class="form-control md-textarea" rows="3"></textarea>
+            <label for="form-text">Your message</label>
+          </div>
+
+          <div class="text-center mt-4">
+            <button class="btn btn-light-blue">Submit</button>
+          </div>
+
+        </div>
+
+      </div>
+      <!--Form with header-->
+
+    </div>
+    <!--Grid column-->
+
+    <!--Grid column-->
+    <div class="col-lg-7">
+
+      <!--Google map-->
+      <div id="map-container-7" class="z-depth-1-half map-container" style="height: 400px"></div>
+      <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfXZU3njaiMFctQ3PLF3w9JV8qOaTkIng&callback=initMap">
+    </script>
+
+      <br>
+      <!--Buttons-->
+      <div class="row text-center">
+        <div class="col-md-4">
+          <a class="btn-floating blue accent-1"><i class="fa fa-map-marker"></i></a>
+          <p>Mission and Bosworth Streets</p>
+          <p>San Francisco, CA 94112</p>
+          <p>United States</p>
+        </div>
+
+        <div class="col-md-4">
+          <a class="btn-floating blue accent-1"><i class="fa fa-phone"></i></a>
+          <p>+ 01 234 567 89</p>
+          <p>Mon - Fri, 8:00-22:00</p>
+        </div>
+
+        <div class="col-md-4">
+          <a class="btn-floating blue accent-1"><i class="fa fa-envelope"></i></a>
+          <p>mikkel250@gmail.com</p>
+          
+        </div>
+      </div>
+
+    </div>
+    <!--Grid column-->
+
+  </div>
+
+</section>
+<!--Section: Contact v.1-->
+
+
+<!--Google Maps-->
+             
+            </div>
+          </div>
+					</div>
+        </div> <!-- featured items row -->
+      </div>  <!-- col-12 div-->
+
+
+      <!-- Sale Items Sidebar -->
+      <div class="col-6 col-md-3 sidebar-offcanvas mt-5" id="sidebar">
+        <div class="list-group">          
+          <h2 class="list-group-item bg-warning text-white">Sale Items</h2>
+          <a href="twirl.html" class="list-group-item">
+            <img class="shadow img-thumbnail" src="../images/Guestural/07a.jpg" alt="">
+          </a>
+           <a href="twirl.html" class=""><h4>Twirl</h4></a>
+            <p class="bg-success text-white p-1">Price:  <s>$40</s><span class="special float-right text-primary"><b>$35</b></span></p>               
+
+          <a href="nose.html" class="list-group-item">
+            <img class="shadow img-thumbnail" src="../images/Guestural/08.jpg" alt="">            
+          </a>
+          <a href="nose.html" class=""><h4>Nose</h4></a>
+            <p class="bg-success text-white p-1">Price:  <s>$50</s><span class="special float-right text-primary"><b>$45</b></span></p>    
+
+          <a href="withered.html" class="list-group-item">
+            <img class="shadow img-thumbnail" src="../images/Guestural/14.jpg" alt="">
+          </a>
+          <a href="withered.html" class=""><h4>Withered</h4></a>
+            <p class="bg-success text-white p-1">Price:  <s>$45</s><span class="special float-right text-primary"><b>$40</b></span></p>
+
+          <a href="pulled.html" class="list-group-item">
+            <img class="shadow img-thumbnail" src="../images/Guestural/10c.jpg" alt="">
+          </a>
+          <a href="pulled.html" class=""><h4>Pulled</h4></a>
+            <p class="bg-success text-white p-1">Price:  <s>$35</s><span class="special float-right text-primary"><b>$30</b></span></p>    
+
+          <a href="horn-o-plenty.html" class="list-group-item">
+            <img class="shadow img-thumbnail" src="../images/Guestural/11.jpg" alt="">
+          </a>
+          <a href="horn-o-plenty.html" class=""><h4>Horn of Plenty</h4></a>
+            <p class="bg-success text-white p-1">Price:  <s>$60</s><span class="special float-right text-primary"><b>$55</b></span></p>    
+
+          <a href="spout.html" class="list-group-item">
+            <img class="shadow img-thumbnail" src="../images/Guestural/16.jpg" alt="">
+          </a>
+          <a href="spout.html" class=""><h4>Spout</h4></a>
+            <p class="bg-success text-white p-1">Price:  <s>$45</s><span class="special float-right text-primary"><b>$40</b></span></p>
+        </div>
+      </div>
+    </div>  <!-- row, offcanvas-right -->
+  </div>
+
+</body>
+</html>

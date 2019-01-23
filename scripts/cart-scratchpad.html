@@ -1,0 +1,111 @@
+<!-- First attempt -->
+<table id="cart" class="table table-hover table-condensed">
+              <thead>
+                <tr>
+                  <th style="width: 10%">Image</th>
+                  <th style="width: 10%">Title</th>
+                  <th style="width: 40%">Description</th>
+                  <th style="width: 10%">Price</th>
+                  <th style="width: 8%">Quantity</th>
+                  <th style="width: 22%">Subtotal</th>
+                  <!-- <th style="width: 10%"></th> -->
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                      <td data-th="Image" class="col-sm-2 hidden-xs"><img src="http://placehold.it/100x100" class="img-responsive"></td>                      
+                        <td data-th="Title" class="text-lg-center">Product 1</td>
+                        <td data-th="Description" class="productDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.</td>
+                      </div>
+                    </div>
+                  </td>
+                  <td data-th="Price">$1.99</td>
+                  <td data-th="Quantity">
+                    <input type="number" class="form-control text-center" value="1">
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr class="visible-xs">
+                  <td class="text-center"><strong>Total 1.99</strong></td>
+                </tr>
+                <tr>
+                  <td><a href="./index.html" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
+                  <td colspan="2" class="hidden-xs"></td>
+                  <td class="hidden-xs text-center"><strong>Total $1.99</strong></td>
+                  <td><a href="#" class="btn btn-success btn-block">Checkout <i class="fa fa-angle-right"></i></a></td>
+                </tr>
+              </tfoot>
+            </table>
+
+<!-- Second attempt - Not really resizing that well, but then again, neither is my previous shipping table after looking at it on a small screen -->
+<div class="row h-75 shadow">  <!-- Adding h-100 here, h-50 to each column, and max-height to the css allowed the images to all be the same height -->
+    <div class="container">
+      <table id="cart" class="table table-hover table-condensed">
+        <thead>
+          <tr>
+              <th style="width: 5%">Image</th>
+              <th style="width: 15%">Title</th>
+              <th style="width: 40%">Description</th>
+              <th style="width: 10%">Price</th>
+              <th style="width: 8%">Quantity</th>
+              <th style="width: 22%">Subtotal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-th="Image">
+              <!-- <div class="row"> -->
+                <!--<div class="col-sm-2 hidden-xs">--><img src="http://placehold.it/100x100" class="img-responsive"><!--</div>-->
+                <td data-th="Title" class="h5">Product 1
+                <!-- <div class="col-sm-10"> -->
+                <!--  <h4 class="">Product 1</h4> -->
+                </td>
+                  <td data-th="Description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua.</td>
+                <!-- </div> 
+              </div>-->
+            </td>
+            <td data-th="Price">$1.99</td>
+            <td data-th="Quantity">
+              <input type="number" class="form-control text-center" value="1">
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr class="visible-xs">
+            <td class="text-center"><strong>Total 1.99</strong></td>
+          </tr>
+          <tr>
+            <td><a href="./index.html" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
+            <td colspan="2" class="hidden-xs"></td>
+            <td class="hidden-xs text-center"><strong>Total $1.99</strong></td>
+            <td><a href="#" class="btn btn-success btn-block">Checkout <i class="fa fa-angle-right"></i></a></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+  </div> <!-- Cart row -->
+</div>  <!-- col-12 div-->
+
+
+<!-- removed the prebuilt cart section-->
+<tr>
+  <!-- <td data-th="Image"> -->
+  <!-- <div class="row"> -->
+  <!--<div class="col-sm-2 hidden-xs"> <img src="http://placehold.it/100x100" class="img-responsive"></div>-->
+  <td data-th="Title" class="h5">
+    <!-- <div class="col-sm-10"> -->
+    <!--  <h4 class="">Product 1</h4> -->
+  </td>
+  <td data-th="Description"></td>
+  <!-- </div> 
+                    </div>-->
+
+  <td data-th="Price"></td>
+  <td data-th="Quantity">
+    <input type="number" class="form-control text-center" value="1">
+  </td>
+</tr>

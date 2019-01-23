@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Demo Store - Bootstrap 4">
+  <meta name="author" content="Mikkel Ridley">
+  
+  <link rel="icon" href="https://v4-alpha.getbootstrap.com/favicon.ico">
+  
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+ 
+ <title>Demo Store - Bootstrap</title>
+ <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/offcanvas/">
+
+  <!-- Bootstrap core CSS -->
+  <link href="./Off Canvas Template for Bootstrap_files/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./styles/style.css">
+<!-- Custom styles for this template -->
+    <link href="./Off Canvas Template for Bootstrap_files/offcanvas.css" rel="stylesheet">
+  
+</head>
+
+
+
+<body>
+
+  <nav class="navbar navbar-toggleable-md fixed-top navbar-inverse bg-inverse">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <a class="navbar-brand" href="https://v4-alpha.getbootstrap.com/examples/offcanvas/#"></a>
+
+   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+     <ul class="navbar-nav mr-auto">
+       <li class="nav-item active">
+         <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+       </li>
+       <li class="nav-item">
+         <a href="finished.html" class="nav-link">Finished</a>
+       </li>
+       <li class="nav-item">
+         <a href="guestural.html" class="nav-link">Guestural</a>
+       </li>
+       <li class="nav-item">
+         <a href="about.html" class="nav-link">About</a>
+       </li>
+       <li class="nav-item">
+         <a href="shipping-rates.html" class="nav-link">Shipping Rates</a>
+       </li>
+       <li class="nav-item">
+         <a href="https://amazecode.com" target="_blank" class="nav-link">Contact</a>
+       </li>        
+     </ul>
+
+     <!-- note: the "ml-auto" will pull the items to the right. "mr-auto" will pull items to the left -->
+     <ul class="navbar-nav ml-auto">
+       <li class="nav-item my-2"><a href="#" title="facebook" rel="external nofollow"><img alt="" src="images/facebook.png"></a></li>
+        <li class="nav-item my-2"><a href="#" title="twitter" rel="external nofollow"><img alt="" src="images/twitter.png"></a></li>
+        <li class="nav-item my-2"><a href="#" title="linkedin" rel="external nofollow"><img alt="" src="images/linkedin.png"></a></li>
+        <li class="nav-item my-2"><a href="#" title="rss" rel="external nofollow"><img alt="" src="images/rss.png"></a></li>
+     </ul>
+
+     <form class="form-inline my-2 my-lg-0">
+       <input class="form-control mr-sm-2" type="text" placeholder="Enter Search Text Here">
+       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+     </form>
+   </div>
+  </nav>
+
+
+  <div class="container-fluid">
+
+    <div class="row row-offcanvas row-offcanvas-right">
+
+
+  <!-- Jumbotron -->
+
+      <div class="col-12 col-md-9">
+        <p class="float-right hidden-md-up">
+          <button type="button" class="btn btn-primary btn sm" data-toggle=
+          "offcanvas"></button>
+        </p>
+        <div class="jumbotron" id="top-jumbotron">
+          <h1 class="text-white">Demo Store - Bootstrap Version</h1>
+        </div>
+        
+        <div class="container">
+        <h2 class="bg-success text-white p-1"> Featured Items</h2>
+        
+  <!-- Featured Items Section -->
+        <!-- I think the answer to uniformly sized rows is to use cards --> 
+        <div class="card-deck">  
+
+          <!-- Adding h-100 here, h-50 to each column, and max-height to the css allowed the images to all be the same height -->
+        <!-- Strangely, the images later resized, but setting it to h-75 once again ensured they were the same height -->  
+          <div class="card">
+            <a href="belle.html"><img class="card-img-top" src="images/fulls/Cups/4-Belle/04b.jpg"></a>
+            <div class="card-body text-center">
+              <a href="belle.html"><h2 class="card-title">Belle</h2></a>
+              <p class="card-text">Hand thrown cup with a rounded, elegant form</p>
+              <p class="card-text bg-success text-white p-1">Price: $40</p>
+              <p class="card-text">
+                <a href="belle.html" class="btn btn-secondary bg-primary text-white" role="button">View Details</a> 
+                <a href="#" class="btn btn-secondary bg-warning text-white" role="button">Add To Cart</a>
+              </p>
+            </div>
+          </div>
+
+           <div class="card">
+            <a href="serpent.html"><img class="card-img-top" src="images/fulls/Mugs-Finished/8-Serpent/08a.jpg"></a>
+            <div class="card-body text-center">
+              <a href="serpent.html"><h2 class="card-title">Serpent</h2></a>
+              <p class="card-text">A finished piece with a serpentine handle</p>
+              <p class=" card-text bg-success text-white p-1">Price: $45</p>
+              <p class="card-text">
+                <a href="serpent.html" class="btn btn-secondary bg-primary text-white" role="button">View Details</a> 
+                <a href="#" class="btn btn-secondary bg-warning text-white" role="button">Add To Cart</a>
+              </p>
+            </div>
+          </div>
+
+
+          <div class="card">
+            <a href="z.html"><img class="card-img-top" src="images/fulls/Mugs-Finished/4-Z/04c.jpg"></a>
+            <a href="belle.html"><h2 class="card-title">Z</h2></a>
+            <p>A finished piece with a Z-shaped handle</p>
+            <p class="card-text bg-success text-white p-1">Price: $48</p>
+            <p class="card-text">
+              <a href="z.html" class="btn btn-secondary bg-primary text-white" role="button">View Details</a> 
+              <a href="#" class="btn btn-secondary bg-warning text-white" role="button">Add To Cart</a>
+            </p>
+          </div>
+
+          <div class="card">
+            <a href="twin.html"><img class="card-img-top" src="images/fulls/Mugs-Finished/9-Twin/09c.jpg"></a>
+            <a href="twin.html"><h2 class="card-title">Twin</h2></a>
+            <p class="card-text">A finished piece with an unusual double handle</p>
+            <p class="card-text bg-success text-white p-1">Price: $42</p>
+            <p class="card-text">
+              <a href="twin.html" class="btn btn-secondary bg-primary text-white" role="button">View Details</a> 
+              <a href="#" class="btn btn-secondary bg-warning text-white" role="button">Add To Cart</a>
+            </p>
+          </div>
+
+
+          <div class="card">
+            <a href="queen-of-hearts.html"><img class="card-img-top" src="images/Guestural/04a.jpg"></a>
+            <a href="queen-of-hearts.html"><h2 class="card-title">Queen of Hearts</h2></a>
+            <p class="card-text">A guestural piece combining both styles</p>
+            <p class="card-text bg-success text-white p-1">Price: $44</p>
+            <p class="card-text">
+              <a href="belle.html" class="btn btn-secondary bg-primary text-white" role="button">View Details</a> 
+              <a href="#" class="btn btn-secondary bg-warning text-white" role="button">Add To Cart</a>
+            </p>
+          </div>
+
+          <div class="card">
+            <a href="lily.html"><img class="card-img-top" src="images/Guestural/06a.jpg"></a>
+            <a href="belle.html"><h2 class="card-title">Lily</h2></a>
+            <p class="card-text">A guestural piece with altered form resembling a Lily flower</p>
+            <p class="card-text bg-success text-white p-1">Price: $42</p>
+            <p class="card-text">
+              <a href="lily.html" class="btn btn-secondary bg-primary text-white" role="button">View Details</a> 
+              <a href="#" class="btn btn-secondary bg-warning text-white" role="button">Add To Cart</a>
+            </p>
+          </div>
+          
+        </div> <!-- featured items row -->
+     </div> <!-- card container -->
+      </div>  <!-- col-12 div-->
+
+      <!-- Sale Items Sidebar -->
+      <div class="col-6 col-md-3 sidebar-offcanvas mt-5" id="sidebar">
+        <div class="list-group">          
+          <h2 class="list-group-item bg-warning text-white">Sale Items</h2>
+          <a href="twirl.html" class="list-group-item">
+            <img class="img-thumbnail" src="images/Guestural/07a.jpg" alt="">
+          </a>
+           <a href="twirl.html" class=""><h4>Twirl</h4></a>
+            <p class="bg-success text-white p-1">Price:  <s>$40</s><span class="special float-right text-primary"><b>$35</b></span></p>               
+
+          <a href="nose.html" class="list-group-item">
+            <img class="img-thumbnail" src="images/Guestural/08.jpg" alt="">            
+          </a>
+          <a href="nose.html" class=""><h4>Nose</h4></a>
+            <p class="bg-success text-white p-1">Price:  <s>$50</s><span class="special float-right text-primary"><b>$45</b></span></p>    
+
+          <a href="withered.html" class="list-group-item">
+            <img class="img-thumbnail" src="images/Guestural/14.jpg" alt="">
+          </a>
+          <a href="withered.html" class=""><h4>Withered</h4></a>
+            <p class="bg-success text-white p-1">Price:  <s>$45</s><span class="special float-right text-primary"><b>$40</b></span></p>
+
+          <a href="pulled.html" class="list-group-item">
+            <img class="img-thumbnail" src="images/Guestural/10c.jpg" alt="">
+          </a>
+          <a href="pulled.html" class=""><h4>Pulled</h4></a>
+            <p class="bg-success text-white p-1">Price:  <s>$35</s><span class="special float-right text-primary"><b>$30</b></span></p>    
+
+          <a href="horn-o-plenty.html" class="list-group-item">
+            <img class="img-thumbnail" src="images/Guestural/11.jpg" alt="">
+          </a>
+          <a href="horn-o-plenty.html" class=""><h4>Horn of Plenty</h4></a>
+            <p class="bg-success text-white p-1">Price:  <s>$60</s><span class="special float-right text-primary"><b>$55</b></span></p>    
+
+          <a href="spout.html" class="list-group-item">
+            <img class="img-thumbnail" src="images/Guestural/16.jpg" alt="">
+          </a>
+          <a href="spout.html" class=""><h4>Spout</h4></a>
+            <p class="bg-success text-white p-1">Price:  <s>$45</s><span class="special float-right text-primary"><b>$40</b></span></p>
+        </div>
+      </div>
+    </div>  <!-- row, offcanvas-right -->
+  </div>
+
+</body>
+</html>

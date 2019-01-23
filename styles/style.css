@@ -1,0 +1,41 @@
+#top-jumbotron {
+	background-image: url("../images/fulls/Mugs-Finished/Group-Shot-Finished/Group-Shot-HQ-1080px-wide.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+
+/* this sets the thumbnail to be no larger than the parent element, which is sized in the html 
+https://stackoverflow.com/questions/30595321/how-to-scale-image-to-fit-the-container
+
+Another suggestion was to set the row to h-100 and each column to h-50 or whatever amount wanted:
+https://stackoverflow.com/questions/43375329/bootstrap-4-row-height
+
+
+*/
+.img-thumbnail {
+	max-height: 30% !important;
+	max-width:  100%;
+}
+
+.usual {
+	text-decoration: line-through;
+}
+
+#profile {
+	max-height: auto;
+	max-width: 460px;
+}
+
+img:hover {
+	-ms-transform:  scale(1.5); /* IE 9 */
+	-webkit-transform:  scale(1.5); /* Safari */
+	transform: scale(1.5);
+	z-index: 20;
+}
+
+/*
+#toggle {
+	z-index: 2;
+}
+*/

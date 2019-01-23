@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      />
+    <meta name="description" content="Demo Store - Bootstrap 4" />
+    <meta name="author" content="Mikkel Ridley" />
+
+    <link rel="icon" href="https://v4-alpha.getbootstrap.com/favicon.ico" />
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      />
+
+    <!-- jQuery library -->
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      />
+
+    <title>Demo Store - Bootstrap</title>
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/4.0/examples/offcanvas/"
+      />
+
+    <!-- Bootstrap core CSS -->
+    <link
+      href="./Off Canvas Template for Bootstrap_files/bootstrap.min.css"
+      rel="stylesheet"
+      />
+
+    <link rel="stylesheet" type="text/css" href="./styles/style.css" />
+    <!-- Custom styles for this template -->
+    <link
+      href="./Off Canvas Template for Bootstrap_files/offcanvas.css"
+      rel="stylesheet"
+      />
+
+
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-toggleable-md fixed-top navbar-inverse bg-inverse
+      h-20">
+      <button
+        class="navbar-toggler navbar-toggler-right bg-inverse"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarsExampleDefault"
+        aria-controls="navbarsExampleDefault"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <a
+        class="navbar-brand"
+        href="https://v4-alpha.getbootstrap.com/examples/offcanvas/#"></a>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <!-- <li class="nav-item active"> -->
+          <li><a class="nav-link" href="index.html">Home </a></li>
+          <li class="nav-item">
+            <a href="finished.html" class="nav-link">Finished</a>
+          </li>
+          <li class="nav-item">
+            <a href="guestural.html" class="nav-link">Guestural</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="shipping-rates.html" class="nav-link">Shipping Rates</a>
+          </li>
+          <li class="nav-item">
+            <a href="https://amazecode.com" target="_blank" class="nav-link">Contact</a>
+          </li>
+        </ul>
+
+        <!-- note: the "ml-auto" will pull the items to the right. "mr-auto" will pull items to the left -->
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item my-2">
+            <a href="#" title="facebook" rel="external nofollow"><img alt=""
+                src="images/facebook.png"
+                /></a>
+          </li>
+          <li class="nav-item my-2">
+            <a href="#" title="twitter" rel="external nofollow"><img alt=""
+                src="images/twitter.png"
+                /></a>
+          </li>
+          <li class="nav-item my-2">
+            <a href="#" title="linkedin" rel="external nofollow"><img alt=""
+                src="images/linkedin.png"
+                /></a>
+          </li>
+          <li class="nav-item my-2">
+            <a href="#" title="rss" rel="external nofollow"><img alt=""
+                src="images/rss.png"
+                /></a>
+          </li>
+          <li class="nav-item my-2"><i class="fas fa-shopping-cart"></i></li>
+        </ul>
+
+        <form class="form-inline my-2 my-lg-0">
+          <input
+            class="form-control mr-sm-2"
+            type="text"
+            placeholder="Enter Search Text Here"
+            />
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+            Search
+          </button>
+          <button
+            style="font-size:24px"
+            onclick="window.location.href='./cart.html'; return false">
+            Cart <i class="fa fa-shopping-cart"></i>
+          </button>
+          <!-- to get this working, had to add "return false", otherwise was just refreshing -->
+        </form>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row row-offcanvas row-offcanvas-right">
+        <!-- Jumbotron -->
+
+        <div class="col-12 col-md-9">
+          <p class="float-right hidden-md-up">
+            <button
+              type="button"
+              class="btn btn-primary btn sm"
+              data-toggle="offcanvas"></button>
+          </p>
+          <div class="jumbotron shadow" id="top-jumbotron">
+            <h1 class="text-white">Demo Store - Bootstrap Version</h1>
+          </div>
+          <!-- Page title section-->
+          <h2 class="bg-success text-white p-1 shadow">
+            Shipping and Checkout
+          </h2>
+          <!-- Shipping Address section -->
+          <div class="row shadow pt-5 pl-3">
+            <form id="shipping-address">
+              <div class="form-row col-12">
+                <div class="form-group col-md-12">
+                  <h2>Shipping Address</h2>
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="Email"
+                    />
+                </div>
+                <div class="form-group col-lg-6 col-md-12">
+                  <label for="firstName">First Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="firstName"
+                    placeholder="First Name"
+                    />
+                </div>
+                <div class="form-group col-lg-6 col-md-12">
+                  <label for="lastName">Last Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="lastName"
+                    placeholder="Last Name"
+                    />
+                </div>
+                <div class="form-group col-md-12">
+                  <label for="address1">Address Line 1</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="address1"
+                    placeholder="Address Line 1"
+                    />
+                </div>
+                <div class="form-group col-md-12">
+                  <label for="address2">Address Line 2</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="address2"
+                    placeholder="Address Line 2"
+                    />
+                </div>
+                <div class="form-group col-lg-4 col-md-12">
+                  <label for="city">City</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="city"
+                    placeholder="City"
+                    />
+                </div>
+                <div class="form-group col-lg-4 col-md-12">
+                  <label for="state">State or Province</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="state"
+                    placeholder="State or Province"
+                    />
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="zipcode">Zip Code</label>
+                  <input type="text" class="form-control" id="zipcode" />
+                </div>
+                <div class="form-group col-lg-4 col-md-12">
+                  <label for="country">Country</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="country"
+                    placeholder="Country"
+                    />
+                </div>
+              </div>
+              <div class="form-group pl-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="same-as-shipping"
+                    />
+                  <label for="same-as-shipping" class="form-check-label">Billing
+                    Address same as shipping</label>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- Billing Address Section -->
+          <div class="row shadow pt-5 pl-3" id="billing-address-section">
+            <form id="billing-address">
+              <div class="form-row col-12">
+                <div class="form-group col-md-12">
+                  <h2>Billing Address</h2>
+                  
+                </div>
+                <div class="form-group col-lg-6 col-md-12">
+                  <label for="firstName">First Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="billing-firstName"
+                    placeholder="First Name"
+                    />
+                </div>
+                <div class="form-group col-lg-6 col-md-12">
+                  <label for="lastName">Last Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="billing-lastName"
+                    placeholder="Last Name"
+                    />
+                </div>
+                <div class="form-group col-md-12">
+                  <label for="address1">Address Line 1</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="billing-address1"
+                    placeholder="Address Line 1"
+                    />
+                </div>
+                <div class="form-group col-md-12">
+                  <label for="address2">Address Line 2</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="billing-address2"
+                    placeholder="Address Line 2"
+                    />
+                </div>
+                <div class="form-group col-lg-4 col-md-12">
+                  <label for="city">City</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="billing-city"
+                    placeholder="City"
+                    />
+                </div>
+                <div class="form-group col-lg-4 col-md-12">
+                  <label for="state">State or Province</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="billing-state"
+                    placeholder="State or Province"
+                    />
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="zipcode">Zip Code</label>
+                  <input type="text" class="form-control" id="zipcode" />
+                </div>
+                <div class="form-group col-lg-4 col-md-12">
+                  <label for="country">Country</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="billing-country"
+                    placeholder="Country"
+                    />
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- Cart Section -->
+          <div class="row shadow pt-5 pl-3">
+            <h2>Cart Contents</h2>
+
+            <div class="container" style="overflow-x:auto;">
+              <table id="cart" class="table table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th style="width: 5%">Title</th>
+                    <th style="width: 73%">Description</th>
+                    <th style="width: 17%">Price</th>
+                    <th style="width: 5%">Quantity</th>
+                  </tr>
+                </thead>
+                <tbody id="cart-body"></tbody>
+                <tfoot id="cart-foot">
+                  <tr>
+                    <td>
+                      <a href="./index.html" class="btn btn-warning"><i
+                          class="fa fa-angle-left"></i> Continue Shopping</a>
+                    </td>
+                    <td colspan="1" class="text-right h5">Subtotal:</td>
+                    <td colspan="1" class="h5" id="subtotal"></td>
+                    <td class="hidden-xs text-center"></td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+          <!-- End Cart row -->
+          <!-- Shipping costs Section -->
+          <div class="row shadow pt-5 pl-3">
+            <h2>Shipping Summary</h2>
+
+            <div class="container" style="overflow-x:auto;">
+              <table id="shipping" class="table table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <!-- <th style="width: 5%">Image</th> -->
+                    <th style="width: 5%">Title</th>
+                    <th style="width: 73%">Shipping Method</th>
+                    <th style="width: 17%">Price</th>
+                    <th style="width: 5%">Quantity</th>
+
+                  </tr>
+                </thead>
+                <tbody id="shipping-body"></tbody>
+                <tfoot id="shipping-foot">
+                  <tr>
+                    <td></td>
+                    <td colspan="1" class="text-right h5">Shipping Total:</td>
+                    <td colspan="1" class="h5" id="shipping-total"></td>
+                    <td></td>
+                  </tr>
+                  </tr>                  
+                    <tr>
+                      <td></td>
+                      <td colspan="1" class="text-right h5">Tax:</td>
+                      <td colspan="1" class="h5" id="tax-total"></td>
+                      <td></td>
+                    </tr>
+                  <tr>
+                    <td>
+                      <button class="btn btn-success" onclick="showShippingRates()"> Show Shipping Rates</button>
+                    </td>
+                    <td colspan="1" class="text-right h5">Grand Total:</td>
+                    <td colspan="1" class="h5" id="grand-total"></td>
+                    <td></td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+
+          <!-- Payment form -->
+          <div class="row align-content-center">
+            <aside class="col-sm-8 offset-2">
+
+              <article class="card">
+                <div class="card-body p-5">
+                  <h2 class="pb-5">Payment</h2>
+                  <ul
+                    class="nav bg-light nav-pills rounded nav-fil mb-3"
+                    role="tablist">
+                    <li class="nav-item">
+                      <a href="#nav-tab-card" class="nav-link active"
+                        data-toggle="pill">
+                        <i class="fa fa-credit-card"></i>
+                        Credit Card
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#nav-tab-paypal" class="nav-link"
+                        data-toggle="pill">
+                        <i class="fab fa-paypal"></i>
+                        Paypal
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#nav-tab-bank" class="nav-link"
+                        data-toggle="pill">
+                        <i class="fa fa-university"></i>
+                        Bank Transfer
+                      </a>
+                    </li>
+                  </ul>
+
+                  <div class="tab-content">
+                    <div class="tab-pane fade show active" id="nav-tab-card">
+                      <p class="alert alert-success"> Success or error
+                        placeholder</p>
+                      <form role="form">
+                        <div class="form-group">
+                          <label for="username">Full Name (on card)</label>
+                          <input class="form-control" type="text"
+                            name="username" placeholder="Full Name on card"
+                            required="">
+                        </div>
+
+                        <div class="form-group">
+                          <label for="cardNumber">Card Number</label>
+                          <div class="input-group">
+                            <input type="number" class="form-control"
+                              name="cardNumber" placeholder="Card Number">
+                            <div class="input-group-append">
+                              <span class="input-group-text text-muted">
+                                <i class="fab fa-cc-visa"></i>
+                                <i class="fab fa-cc-amex"></i>
+                                <i class="fab fa-cc-mastercard"></i>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-sm-8">
+                            <div class="form-group">
+                              <label><span class="hidden-xs">Expiration</span></label>
+                              <div class="input-group">
+                                <input type="number" class="form-control"
+                                  placeholder="MM" name="">
+                                <input type="number" class="form-control"
+                                  placeholder="MM" name="">
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-sm4">
+                            <div class="form-group">
+                              <label data-toggle="tooltip" title=""
+                                data-original-title="3 digit code on back side
+                                of card">CVV <i class="fa fa-question-circle"></i></label>
+                              <input type="number" class="form-control"
+                                required="">
+                            </div>
+                          </div>
+                        </div>
+
+                        <button class="subscribe btn btn-primary btn-block">Place
+                          Order</button>
+                      </form>
+                    </div>
+
+                    <div class="tab-pane fade" id="nav-tab-paypal">
+                      <p>Paypal is the easiest way to pay online</p>
+                      <p>
+                        <button class="btn btn-primary" type="button"><i
+                            class="fab fa-paypal"></i>Log into Paypal</button>
+                      </p>
+                    </div>
+                    <div class="tab-pane fade" id="nav-tab-bank">
+
+
+                      <form role="form">
+                        <div class="form-group">
+                          <label for="routing">Routing Number</label>
+                          <input class="form-control" type="number"
+                            name="bank-username" placeholder="Enter Routing
+                            Number" required="">
+                        </div>
+
+                        <div class="form-group">
+                          <label for="accountNumber">Account Number</label>
+                          <div class="input-group">
+                            <input type="number" class="form-control"
+                              name="accountNumber" placeholder="Account Number">
+                          </div>
+                        </div>
+                        <button class="subscribe btn btn-primary btn-block">Place
+                          Order</button>
+                      </form>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </article>
+          </aside>
+        </div>
+
+
+
+
+      </div><!-- End col-12 div-->
+
+
+
+
+      <!-- Custom JS for this page -->
+
+      <script src="scripts/script-cart-shipping.js"></script>
+    </body>
+  </html>
+
+  <!-- https://bootsnipp.com/snippets/5Mkl8 -->
+  <!-- 
+  
+-->

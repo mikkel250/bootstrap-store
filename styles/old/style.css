@@ -1,0 +1,13 @@
+.bg {
+	background-image: url("../images/fulls/Mugs-Finished/Group-Shot-Finished/Group-Shot-HQ-1080px-wide.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size:  cover;
+	min-height:  10vh;
+}
+
+#social-and-search {
+	min-height: 5vh;
+}
+
+
