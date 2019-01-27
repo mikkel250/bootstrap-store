@@ -22,7 +22,7 @@
       src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Popper JS -->
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script
       src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
@@ -168,7 +168,7 @@
                     type="email"
                     class="form-control"
                     id="email"
-                    placeholder="Email"
+                    placeholder="Email" required
                     />
                 </div>
                 <div class="form-group col-lg-6 col-md-12">
@@ -235,8 +235,7 @@
                     type="text"
                     class="form-control"
                     id="country"
-                    placeholder="Country"
-                    />
+                    placeholder="Country" onchange="setRegion(country)" required/>
                 </div>
               </div>
               <div class="form-group pl-3">
@@ -353,7 +352,7 @@
                       <a href="./index.html" class="btn btn-warning"><i
                           class="fa fa-angle-left"></i> Continue Shopping</a>
                     </td>
-                    <td colspan="1" class="text-right h5">Subtotal:</td>
+                    <td colspan="1" class="text-right h5">Subtotal: $</td>
                     <td colspan="1" class="h5" id="subtotal"></td>
                     <td class="hidden-xs text-center"></td>
                   </tr>
@@ -382,22 +381,28 @@
                 <tfoot id="shipping-foot">
                   <tr>
                     <td></td>
-                    <td colspan="1" class="text-right h5">Shipping Total:</td>
+                    <td colspan="1" class="text-right h5">Shipping Total: $</td>
                     <td colspan="1" class="h5" id="shipping-total"></td>
                     <td></td>
                   </tr>
                   </tr>                  
                     <tr>
                       <td></td>
-                      <td colspan="1" class="text-right h5">Tax:</td>
+                      <td colspan="1" class="text-right h5">Tax: $</td>
                       <td colspan="1" class="h5" id="tax-total"></td>
                       <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td colspan="1" class="text-right h5">Discount Code:</td>
+                      <td colspan="1" class="" id=""><input type="text" value="" placeholder="Enter Discount Code"></td>
+                      <td><button class="btn btn-primary" type="button" id="discount-button">Submit</button></td>
                     </tr>
                   <tr>
                     <td>
                       <button class="btn btn-success" onclick="showShippingRates()"> Show Shipping Rates</button>
                     </td>
-                    <td colspan="1" class="text-right h5">Grand Total:</td>
+                    <td colspan="1" class="text-right h5">Grand Total: $</td>
                     <td colspan="1" class="h5" id="grand-total"></td>
                     <td></td>
                   </tr>
@@ -426,7 +431,7 @@
                     <li class="nav-item">
                       <a href="#nav-tab-paypal" class="nav-link"
                         data-toggle="pill">
-                        <i class="fab fa-paypal"></i>
+                        <i class="fa fa-paypal"></i>
                         Paypal
                       </a>
                     </li>
@@ -441,26 +446,25 @@
 
                   <div class="tab-content">
                     <div class="tab-pane fade show active" id="nav-tab-card">
-                      <p class="alert alert-success"> Success or error
-                        placeholder</p>
+                      <p class="" id="confirmation-message"></p>
                       <form role="form">
                         <div class="form-group">
                           <label for="username">Full Name (on card)</label>
                           <input class="form-control" type="text"
                             name="username" placeholder="Full Name on card"
-                            required="">
+                            required>
                         </div>
 
                         <div class="form-group">
                           <label for="cardNumber">Card Number</label>
                           <div class="input-group">
                             <input type="number" class="form-control"
-                              name="cardNumber" placeholder="Card Number">
+                              name="cardNumber" placeholder="Card Number" id="card-number" required>
                             <div class="input-group-append">
                               <span class="input-group-text text-muted">
-                                <i class="fab fa-cc-visa"></i>
-                                <i class="fab fa-cc-amex"></i>
-                                <i class="fab fa-cc-mastercard"></i>
+                                <i class="fa fa-cc-visa pr-1"> </i>
+                                <i class="fa fa-cc-amex pr-1"> </i>
+                                <i class="fa fa-cc-mastercard"> </i>
                               </span>
                             </div>
                           </div>
@@ -472,9 +476,9 @@
                               <label><span class="hidden-xs">Expiration</span></label>
                               <div class="input-group">
                                 <input type="number" class="form-control"
-                                  placeholder="MM" name="">
-                                <input type="number" class="form-control"
-                                  placeholder="MM" name="">
+                                  placeholder="MM" name="" id="exp-month" required>
+                                <input type="text" class="form-control"
+                                  placeholder="MM" name="" id="exp-year" required>
                               </div>
                             </div>
                           </div>
@@ -484,22 +488,23 @@
                               <label data-toggle="tooltip" title=""
                                 data-original-title="3 digit code on back side
                                 of card">CVV <i class="fa fa-question-circle"></i></label>
-                              <input type="number" class="form-control"
-                                required="">
+                              <input type="text" class="form-control"
+                                required>
                             </div>
                           </div>
                         </div>
-
-                        <button class="subscribe btn btn-primary btn-block">Place
+                        <div class="submit">
+                        <button type="submit" class="subscribe btn btn-primary btn-block" id="cc-place-order" action="javascript:placeOrder();">Place
                           Order</button>
+                          </div>
                       </form>
                     </div>
 
                     <div class="tab-pane fade" id="nav-tab-paypal">
                       <p>Paypal is the easiest way to pay online</p>
                       <p>
-                        <button class="btn btn-primary" type="button"><i
-                            class="fab fa-paypal"></i>Log into Paypal</button>
+                        <button class="btn btn-primary" type="button" id="paypal-button"><i
+                            class="fa fa-paypal"></i>Log into Paypal</button>
                       </p>
                     </div>
                     <div class="tab-pane fade" id="nav-tab-bank">
@@ -520,7 +525,7 @@
                               name="accountNumber" placeholder="Account Number">
                           </div>
                         </div>
-                        <button class="subscribe btn btn-primary btn-block">Place
+                        <button class="subscribe btn btn-primary btn-block" id="bank-place-order" type="button">Place
                           Order</button>
                       </form>
 
@@ -549,7 +554,5 @@
     </body>
   </html>
 
-  <!-- https://bootsnipp.com/snippets/5Mkl8 -->
-  <!-- 
+
   
--->
