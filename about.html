@@ -31,10 +31,10 @@
  <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/offcanvas/">
 
   <!-- Bootstrap core CSS -->
-  <link href="./Off Canvas Template for Bootstrap_files/bootstrap.min.css" rel="stylesheet">
+  <link href="Off Canvas Template for Bootstrap_files/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./styles/style.css">
 <!-- Custom styles for this template -->
-    <link href="./Off Canvas Template for Bootstrap_files/offcanvas.css" rel="stylesheet">
+    <link href="Off Canvas Template for Bootstrap_files/offcanvas.css" rel="stylesheet">
   
 </head>
 
@@ -112,7 +112,7 @@
         <div class="row h-50">   
           <div class="col-12">
            <div class="card">
-          <img class="shadow card-img-top img-thumbnail mx-auto" id="profile" src="../images/my-profile-cropped-400px-height.jpg">
+          <img class="shadow card-img-top img-thumbnail mx-auto" id="profile" src="images/my-profile-cropped-400px-height.jpg">
           <div class="card-body shadow">
            <h3 class="card-title text-center">Hi there, I'm Mikkel Ridley.</h3>
             <p class="card-text text-center">I have a degree in ceramics and am using some work here to create a mock online store as a project intended to showcase and increase my skills in Web Development.</p>
@@ -188,6 +188,15 @@
 
       <!--Google map-->
       <div id="map-container-7" class="z-depth-1-half map-container" style="height: 400px"></div>
+      <script>
+        var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map-container-7'), {
+          center: {lat: 37.733750, lng: -122.426342},
+          zoom: 16
+        });
+      }
+      </script>
       <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfXZU3njaiMFctQ3PLF3w9JV8qOaTkIng&callback=initMap">
     </script>
@@ -238,37 +247,37 @@
         <div class="list-group">          
           <h2 class="list-group-item bg-warning text-white">Sale Items</h2>
           <a href="twirl.html" class="list-group-item">
-            <img class="shadow img-thumbnail" src="../images/Guestural/07a.jpg" alt="">
+            <img class="shadow img-thumbnail" src="images/Guestural/07a.jpg" alt="">
           </a>
            <a href="twirl.html" class=""><h4>Twirl</h4></a>
             <p class="bg-success text-white p-1">Price:  <s>$40</s><span class="special float-right text-primary"><b>$35</b></span></p>               
 
           <a href="nose.html" class="list-group-item">
-            <img class="shadow img-thumbnail" src="../images/Guestural/08.jpg" alt="">            
+            <img class="shadow img-thumbnail" src="images/Guestural/08.jpg" alt="">            
           </a>
           <a href="nose.html" class=""><h4>Nose</h4></a>
             <p class="bg-success text-white p-1">Price:  <s>$50</s><span class="special float-right text-primary"><b>$45</b></span></p>    
 
           <a href="withered.html" class="list-group-item">
-            <img class="shadow img-thumbnail" src="../images/Guestural/14.jpg" alt="">
+            <img class="shadow img-thumbnail" src="images/Guestural/14.jpg" alt="">
           </a>
           <a href="withered.html" class=""><h4>Withered</h4></a>
             <p class="bg-success text-white p-1">Price:  <s>$45</s><span class="special float-right text-primary"><b>$40</b></span></p>
 
           <a href="pulled.html" class="list-group-item">
-            <img class="shadow img-thumbnail" src="../images/Guestural/10c.jpg" alt="">
+            <img class="shadow img-thumbnail" src="images/Guestural/10c.jpg" alt="">
           </a>
           <a href="pulled.html" class=""><h4>Pulled</h4></a>
             <p class="bg-success text-white p-1">Price:  <s>$35</s><span class="special float-right text-primary"><b>$30</b></span></p>    
 
           <a href="horn-o-plenty.html" class="list-group-item">
-            <img class="shadow img-thumbnail" src="../images/Guestural/11.jpg" alt="">
+            <img class="shadow img-thumbnail" src="images/Guestural/11.jpg" alt="">
           </a>
           <a href="horn-o-plenty.html" class=""><h4>Horn of Plenty</h4></a>
             <p class="bg-success text-white p-1">Price:  <s>$60</s><span class="special float-right text-primary"><b>$55</b></span></p>    
 
           <a href="spout.html" class="list-group-item">
-            <img class="shadow img-thumbnail" src="../images/Guestural/16.jpg" alt="">
+            <img class="shadow img-thumbnail" src="images/Guestural/16.jpg" alt="">
           </a>
           <a href="spout.html" class=""><h4>Spout</h4></a>
             <p class="bg-success text-white p-1">Price:  <s>$45</s><span class="special float-right text-primary"><b>$40</b></span></p>
